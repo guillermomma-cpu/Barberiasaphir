@@ -1,0 +1,207 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BARBERÍA SAPHIR - Estilo & Precisión</title>
+  <link rel="stylesheet" href="css/styles.css" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+</head>
+<body>
+  <header class="header">
+    <nav class="nav container">
+      <div class="nav__logo">BARBERÍA <span>SAPHIR</span></div>
+      <button class="nav__toggle" aria-label="Abrir menú">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav__links">
+        <li><a href="#inicio">Inicio</a></li>
+        <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#galeria">Galería</a></li>
+        <li><a href="#reservas">Reservas</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+
+    <section id="inicio" class="hero container">
+      <div class="hero__content">
+        <h1>Cortes limpios, estilo auténtico.</h1>
+        <p>
+          Una barbería moderna donde el detalle importa. Reserva tu cita en pocos segundos
+          y sal con el mejor corte de tu vida.
+        </p>
+        <div class="hero__actions">
+          <a href="#reservas" class="btn btn--primary">Reservar ahora</a>
+          <a href="#galeria" class="btn btn--ghost">Ver estilos</a>
+        </div>
+        <div class="hero__meta">
+          <span>✂️ 10+ años de experiencia</span>
+          <span>⭐ 4.9/5 clientes satisfechos</span>
+        </div>
+      </div>
+      <div class="hero__card">
+        <p class="hero__card-title">Próxima cita disponible</p>
+        <p class="hero__card-time">Hoy mismo</p>
+        <p class="hero__card-text">Agenda tu corte en segundos con nuestro sistema de reservas.</p>
+        <a href="#reservas" class="btn btn--secondary btn--full">Reservar cita</a>
+      </div>
+    </section>
+  </header>
+
+  <main>
+    <section id="servicios" class="section section--light">
+      <div class="container">
+        <header class="section__header">
+          <h2>Servicios</h2>
+          <p>Todo lo que necesitas para mantener tu estilo siempre perfecto.</p>
+        </header>
+        <div class="grid grid--3">
+          <article class="card card--service">
+            <h3>Corte clásico</h3>
+            <p>Corte con tijera y máquina, acabado a navaja en contornos.</p>
+            <span class="chip">30 min</span>
+          </article>
+          <article class="card card--service">
+            <h3>Degradado / Fade</h3>
+            <p>Degradados modernos con detalles pulidos y definición extrema.</p>
+            <span class="chip">40 min</span>
+          </article>
+          <article class="card card--service">
+            <h3>Arreglo de barba</h3>
+            <p>Perfilado, recorte y cuidado de la barba con toalla caliente.</p>
+            <span class="chip">20 min</span>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section id="galeria" class="section">
+      <div class="container">
+        <header class="section__header">
+          <h2>Galería de estilos</h2>
+          <p>
+            Inspírate con algunos de los cortes de pelo y barba que realizamos.
+            </p>
+        </header>
+        <div class="grid grid--3 gallery">
+          <figure class="gallery__item">
+            <img src="img/corte-clasico.svg" alt="Corte clásico" />
+            <figcaption>Corte clásico</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/degradado-fade.svg" alt="Degradado / Fade" />
+            <figcaption>Degradado / Fade</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/rapado-moderno.svg" alt="Rapado moderno" />
+            <figcaption>Rapado moderno</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/barba-perfilada.svg" alt="Barba perfilada" />
+            <figcaption>Barba perfilada</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/barba-larga.svg" alt="Barba larga cuidada" />
+            <figcaption>Barba larga cuidada</figcaption>
+          </figure>
+          <figure class="gallery__item">
+            <img src="img/peinado-texturizado.svg" alt="Peinado texturizado" />
+            <figcaption>Peinado texturizado</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section id="reservas" class="section section--dark">
+      <div class="container container--split">
+        <div class="reservas__info">
+          <header class="section__header section__header--left section__header--light">
+            <h2>Reserva tu cita</h2>
+            <p>
+              Completa el formulario y recibe la confirmación de tu cita al momento.
+                         </p>
+          </header>
+          <ul class="reservas__list">
+            <li>✔ Obtén tu cita en menos de un minuto.</li>            
+          </ul>
+        </div>
+
+        <div class="card card--form">
+          <form id="booking-form" novalidate>
+            <div class="form__group">
+              <label for="nombre">Nombre completo</label>
+              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" required />
+            </div>
+            <div class="form__group">
+              <label for="telefono">Teléfono</label>
+              <input type="tel" id="telefono" name="telefono" placeholder="Ej: 600 000 000" required />
+            </div>
+            <div class="form__group">
+              <label for="email">Correo electrónico</label>
+              <input type="email" id="email" name="email" placeholder="tucorreo@gmail.com" required />
+            </div>
+            <div class="form__group form__group--two">
+              <div>
+                <label for="fecha">Fecha</label>
+                <input type="date" id="fecha" name="fecha" required />
+              </div>
+              <div>
+                <label for="hora">Hora</label>
+                <input type="time" id="hora" name="hora" required />
+              </div>
+            </div>
+            <div class="form__group">
+              <label for="servicio">Servicio</label>
+              <select id="servicio" name="servicio" required>
+                <option value="">Selecciona un servicio</option>
+                <option value="corte-clasico">Corte clásico</option>
+                <option value="degradado-fade">Degradado / Fade</option>
+                <option value="arreglo-barba">Arreglo de barba</option>
+                <option value="pack-completo">Pack completo (corte + barba)</option>
+              </select>
+            </div>
+            <div class="form__group">
+              <label for="notas">Notas adicionales</label>
+              <textarea id="notas" name="notas" rows="3" placeholder="Cuéntanos si tienes alguna preferencia."></textarea>
+            </div>
+            <button type="submit" class="btn btn--primary btn--full">Enviar reserva</button>
+            <p id="booking-message" class="form__message" aria-live="polite"></p>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <section id="contacto" class="section section--light">
+      <div class="container container--split">
+        <div>
+          <header class="section__header section__header--left">
+            <h2>Contacto & ubicación</h2>
+                  </header>
+          <ul class="contact__list">
+            <li><strong>Dirección:</strong> Calle Pedro Antonio de Alarcón, 65, Granada</li>
+            <li><strong>Teléfono:</strong> 958994299</li>
+            <li><strong>Horario:</strong> Lunes - Sábado: 10:00 - 20:00</li>
+          </ul>
+        </div>
+        <div class="card card--map">
+       <figure class="gallery__item">
+            <img src="img/mapa-barberia.svg" alt="mapa-barberia" />
+                      </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__content">
+      <p>© <span id="year"></span> BARBERÍA SAPHIR. Todos los derechos reservados.</p>
+      <p class="footer__dev">*TODAS LAS IMÁGENES HAN SIDO GENERADAS POR INTELIGENCIA ARTIFICIAL PARA EVITAR PROBLEMAS CON LA LEY DE PROTECCIÓN DE DATOS.</p>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
